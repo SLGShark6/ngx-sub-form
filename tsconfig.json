@@ -3,6 +3,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
     "sourceMap": true,
     "declaration": false,
     "module": "esnext",
@@ -15,13 +20,22 @@
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
     "stripInternal": true,
     "target": "es5",
     "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
     "paths": {
-      "ngx-sub-form": ["projects/ngx-sub-form/src/public_api"],
-      "ngx-sub-form/*": ["projects/ngx-sub-form/src/public_api"]
+      "ngx-sub-form": ["projects/ngx-sub-form/src/public-api"],
+      "ngx-sub-form/*": ["projects/ngx-sub-form/src/public-api"]
     }
+  },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   }
 }
