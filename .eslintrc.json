@@ -1,6 +1,11 @@
 {
   "root": true,
-  "ignorePatterns": [],
+  "ignorePatterns": [
+    "projects/**/*",
+    "*.tst",
+    "*.spec.ts",
+    "*.scss" // Prevent checking scss for now
+  ],
   "overrides": [
     {
       "files": [
